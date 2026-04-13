@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravador de Tela & Áudio Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Gravador Stúdio</h1>
+            <p>Grave sua tela e voz localmente com alta qualidade</p>
+        </header>
+
+        <main class="main-content">
+            <div class="video-container">
+                <video id="preview" autoplay muted playsinline placeholder="Sua tela aparecerá aqui"></video>
+                <div id="status-indicator" class="status-indicator">Pronto para gravar</div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn primary">
+                    <span class="icon">🔴</span> Iniciar Gravação
+                </button>
+                <button id="stopBtn" class="btn danger" disabled>
+                    <span class="icon">⏹</span> Parar Gravação
+                </button>
+                <button id="downloadBtn" class="btn success" disabled>
+                    <span class="icon">⬇️</span> Baixar Vídeo
+                </button>
+            </div>
+            
+            <div class="instructions">
+                <h3>Como usar:</h3>
+                <ol>
+                    <li>Clique em <strong>Iniciar Gravação</strong>.</li>
+                    <li>Surgirá uma janela do navegador pedindo permissão de tela. Você pode escolher a tela inteira, uma janela ou uma guia.</li>
+                    <li><strong>IMPORTANTE:</strong> Para gravar o áudio de uma guia ou app, lembre-se de marcar a opção <em>"Compartilhar áudio do sistema"</em> ou <em>"Share tab audio"</em> na tela de permissão do navegador!</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
