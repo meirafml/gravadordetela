@@ -1,0 +1,6 @@
+# Certificado local auto-assinado (gerado na primeira execucao)
+certs/
+
+# Node
+node_modules/
+npm-debug.log*

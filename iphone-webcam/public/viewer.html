@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Webcam - Visor (PC)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>iPhone Webcam</h1>
+            <p>O video do seu iPhone aparece aqui. Use esta janela como fonte no OBS para virar uma webcam no Zoom, Teams e Meet.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="video-container" id="stage">
+                <video id="remote" autoplay playsinline></video>
+                <div id="status" class="status-indicator">Aguardando o iPhone...</div>
+                <button id="fsBtn" class="fs-btn" title="Tela cheia">⛶</button>
+            </div>
+
+            <div class="connect-box" id="connectBox">
+                <h3>Abra no iPhone (Safari):</h3>
+                <div id="urls" class="urls">Procurando o endereco do cabo USB...</div>
+                <p class="hint">Conecte o iPhone pelo cabo <strong>USB-C</strong> e ligue o <strong>Compartilhamento de Internet</strong>. O endereco que comeca com <code>172.20.10</code> e o do cabo.</p>
+            </div>
+
+            <details class="instructions">
+                <summary>Como virar uma webcam no Zoom/Teams</summary>
+                <ol>
+                    <li>Instale o <strong>OBS Studio</strong> (gratis) no Windows.</li>
+                    <li>No OBS, adicione uma fonte <strong>Navegador (Browser)</strong> e aponte para <code>https://localhost:8443</code>.</li>
+                    <li>Clique em <strong>Iniciar Camera Virtual</strong> no OBS.</li>
+                    <li>No Zoom/Teams/Meet, escolha a camera <strong>OBS Virtual Camera</strong>.</li>
+                </ol>
+            </details>
+        </main>
+    </div>
+
+    <script src="viewer.js"></script>
+</body>
+</html>

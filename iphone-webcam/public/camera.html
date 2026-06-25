@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>iPhone Webcam - Camera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="camera-page">
+    <div class="app-container compact">
+        <header>
+            <h1>Camera do iPhone</h1>
+            <p>Mantenha esta tela aberta enquanto usa a webcam no PC</p>
+        </header>
+
+        <main class="main-content">
+            <div class="video-container">
+                <video id="local" autoplay muted playsinline></video>
+                <div id="status" class="status-indicator">Toque em Iniciar</div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn primary">
+                    <span class="icon">📷</span> Iniciar camera
+                </button>
+                <button id="switchBtn" class="btn" disabled>
+                    <span class="icon">🔄</span> Frontal / Traseira
+                </button>
+                <button id="torchBtn" class="btn" disabled>
+                    <span class="icon">🔦</span> Lanterna
+                </button>
+                <button id="stopBtn" class="btn danger" disabled>
+                    <span class="icon">⏹</span> Parar
+                </button>
+            </div>
+
+            <div class="settings">
+                <label for="quality">Qualidade</label>
+                <select id="quality">
+                    <option value="1280x720">HD 720p (leve)</option>
+                    <option value="1920x1080" selected>Full HD 1080p</option>
+                    <option value="3840x2160">4K (precisa de boa conexao)</option>
+                </select>
+            </div>
+
+            <div class="instructions">
+                <h3>Dica</h3>
+                <ol>
+                    <li>O iPhone precisa estar com o <strong>Compartilhamento de Internet</strong> ligado e conectado ao PC pelo cabo <strong>USB-C</strong>.</li>
+                    <li>Deixe esta aba aberta e o iPhone desbloqueado (ou impeca o bloqueio automatico) para o video nao parar.</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <script src="camera.js"></script>
+</body>
+</html>
