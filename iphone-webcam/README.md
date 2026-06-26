@@ -31,7 +31,8 @@ iPhone como uma placa de rede (o IP costuma ser `172.20.10.x`).
 
 ### 2. Inicie o servidor no PC
 Dê dois cliques em **`iniciar.bat`** (ou abra o terminal nesta pasta e rode
-`node server.js`). Na primeira vez ele cria sozinho um certificado local.
+`node server.js`). O certificado local já vem incluído — não precisa instalar
+nada além do Node.js.
 
 O terminal vai mostrar os endereços, por exemplo:
 
@@ -44,8 +45,11 @@ O terminal vai mostrar os endereços, por exemplo:
 ```
 
 ### 3. No PC, abra o visor
-Abra **`https://localhost:8443`** no navegador. Vai aparecer "Aguardando o
-iPhone..." e o endereço que você deve digitar no iPhone.
+Abra **`https://localhost:8443`** no navegador.
+- O navegador vai mostrar um aviso de "conexão não é particular" (por causa do
+  certificado local). Clique em **Avançado → Ir para localhost (não seguro)**.
+- Vai aparecer "Aguardando o iPhone..." e o endereço que você deve digitar no
+  iPhone.
 
 ### 4. No iPhone, abra a câmera
 No **Safari**, digite o endereço `https://172.20.10.x:8443/camera`.

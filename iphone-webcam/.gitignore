@@ -1,6 +1,7 @@
-# Certificado local auto-assinado (gerado na primeira execucao)
-certs/
-
 # Node
 node_modules/
 npm-debug.log*
+
+# Observacao: os arquivos em certs/ (cert.pem e key.pem) SAO versionados de
+# proposito. E um certificado local, auto-assinado e descartavel, so para o
+# Safari liberar a camera em https. Nao tem valor fora da sua maquina.

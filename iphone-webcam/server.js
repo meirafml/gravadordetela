@@ -33,8 +33,9 @@ const CERT_FILE = path.join(CERT_DIR, 'cert.pem');
 const KEY_FILE = path.join(CERT_DIR, 'key.pem');
 
 // ---------------------------------------------------------------------------
-// Certificado auto-assinado: usa o que ja existe; se nao houver, tenta gerar
-// com o openssl. Se nao der, explica como gerar e encerra.
+// Certificado auto-assinado: o app ja vem com um pronto em certs/, entao no
+// caso normal nada acontece aqui. So se alguem apagar os arquivos a gente
+// tenta regerar com o openssl (se estiver instalado).
 // ---------------------------------------------------------------------------
 function ensureCert() {
   if (fs.existsSync(CERT_FILE) && fs.existsSync(KEY_FILE)) return;
